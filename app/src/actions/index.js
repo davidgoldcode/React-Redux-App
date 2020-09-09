@@ -9,16 +9,19 @@ export const FETCH_RECIPE_SUCCESS = 'FETCH_RECIPE_SUCCESS';
 export const FETCH_RECIPE_ERROR = 'FETCH_RECIPE_ERROR';
 
 // action creators
-export const fetchRecipe = () => (dispatch) => {
+export const fetchRecipe = () => {
+ return dispatch => {
     dispatch({ type: FETCH_RECIPE });
-    axios 
+        axios 
         .get(apiUrl)
         .then(res => {
-            debugger;
-            dispatch({ type: FETCH_RECIPE_SUCCESS, payload: res.data.all }); // too fix
+            console.log(res);
+            dispatch({ type: FETCH_RECIPE_SUCCESS, payload: res.data.data }); // too fix
         })
         .catch(err => {
             debugger;
             dispatch({ type: FETCH_RECIPE_ERROR, payload: { message: "No tacos for you, friend"} });
         })
-    }
+}
+ }
+ 

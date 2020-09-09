@@ -1,12 +1,20 @@
 import React from 'react';
 import TacoRecipe from './TacoRecipe';
-import { connect } from 'react-redux';
+import { connect, useDispatch } from 'react-redux';
+import { fetchRecipe } from '../actions/index'
 
 const Tacos = (props) => {
+
+    const dispatch = useDispatch();
+    const getNewRecipe = e =>{
+        e.preventDefault();
+        dispatch(fetchRecipe())
+    }
     
     return(
         <>
         {props.recipes.map((item) => (<TacoRecipe recipe={item}/>))}
+        <button onClick={ getNewRecipe }> Get new recipe </button>
         </>
     )
 }

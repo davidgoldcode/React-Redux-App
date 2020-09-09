@@ -1,6 +1,6 @@
 
 const initialState = {
-    recipes: ['recipe 123', 'recipe 7'], 
+    recipes: [], 
     loadingTacos: true,
     errorMessage: '',
 }
