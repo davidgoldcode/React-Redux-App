@@ -5,7 +5,9 @@ import { connect } from 'react-redux';
 const Tacos = (props) => {
     
     return(
-        <div>Tacos go here</div>
+        <>
+        {props.recipes.map((item) => (<TacoRecipe recipe={item}/>))}
+        </>
     )
 }
 
