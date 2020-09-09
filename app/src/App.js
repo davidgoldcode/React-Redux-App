@@ -8,6 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
       <h2>Random Taco Recipe Generator</h2>
+      <img src='https://iamnm.com/wp-content/uploads/2016/10/taco.png' alt='delicious taco'></img>
       <Tacos />
       </header>
     </div>
