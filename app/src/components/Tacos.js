@@ -6,6 +6,7 @@ import { fetchRecipe } from '../actions/index'
 const Tacos = (props) => {
 
     const dispatch = useDispatch();
+
     const getNewRecipe = e =>{
         e.preventDefault();
         dispatch(fetchRecipe())
@@ -13,7 +14,7 @@ const Tacos = (props) => {
     
     return(
         <>
-        {props.recipes.map((item) => (<TacoRecipe recipe={item}/>))}
+        {props.recipes.map((item) => (<TacoRecipe name={item}/>))}
         <button onClick={ getNewRecipe }> Get new recipe </button>
         </>
     )

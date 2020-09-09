@@ -15,8 +15,9 @@ export const fetchRecipe = () => {
         axios 
         .get(apiUrl)
         .then(res => {
-            console.log(res);
-            dispatch({ type: FETCH_RECIPE_SUCCESS, payload: res.data.data }); // too fix
+            let data = Object.keys(res.data).map((item) => res.data[item].name);
+            data = data[Math.ceil(Math.random(5))]
+            dispatch({ type: FETCH_RECIPE_SUCCESS, payload: data }); // too fix
         })
         .catch(err => {
             debugger;

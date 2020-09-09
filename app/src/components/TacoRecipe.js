@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 const TacoRecipe = (props) => {
     
     return(
-        <div>{props.recipe}</div>
+        <div>{props.name}</div>
     )
 }
 
