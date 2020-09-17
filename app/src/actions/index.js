@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // api link
-const apiUrl = 'http://taco-randomizer.herokuapp.com/random/';
+const apiUrl = 'https://taco-randomizer.herokuapp.com/random/';
 
 // action types
 export const FETCH_RECIPE = 'FETCH_RECIPE';
